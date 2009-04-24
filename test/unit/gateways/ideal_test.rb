@@ -98,12 +98,12 @@ module IdealTestCases
       ]
 
       keys.each do |key, expected_key|
-        assert_equal expected_key, @gateway.send(:uglify_key, key)
+        assert_equal expected_key, @gateway.send(:javaize_key, key)
       end
     end
 
     def test_does_not_convert_unknown_key_to_ugly_key
-      assert_equal 'not_a_registered_key', @gateway.send(:uglify_key, :not_a_registered_key)
+      assert_equal 'not_a_registered_key', @gateway.send(:javaize_key, :not_a_registered_key)
     end
 
     def test_token_generation
