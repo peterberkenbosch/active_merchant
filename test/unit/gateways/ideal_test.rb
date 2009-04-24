@@ -360,8 +360,8 @@ module IdealTestCases
     end
 
     def test_returns_error_messages
-      assert_equal 'Failure in system', @response.error_message[:system]
-      assert_equal 'Betalen met iDEAL is nu niet mogelijk.', @response.error_message[:human]
+      assert_equal 'Failure in system', @response.error_message
+      assert_equal 'Betalen met iDEAL is nu niet mogelijk.', @response.consumer_error_message
     end
 
     def test_returns_error_code
