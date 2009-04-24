@@ -13,7 +13,7 @@ module ActiveMerchant #:nodoc:
         @response = REXML::Document.new(response_body).root
         @success = !error_occured?
         @test = options[:test]
-        #@params = Hash.from_xml(response_body)
+        @params = Hash.from_xml(response_body)
       end
 
       # Returns a technical error message.
