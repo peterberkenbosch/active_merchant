@@ -479,6 +479,9 @@ module IdealTestCases
       assert !capture_response.success?
     end
 
+    #don't understand what is being tested here... let's investigate.
+    #status is alway succes...??
+    #guessing that the stubbing is not done right..
     def test_returns_status
       response = IdealStatusResponse.new(ACQUIRER_SUCCEEDED_STATUS_RESPONSE)
       [
